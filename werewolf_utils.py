@@ -8,7 +8,7 @@ import json
 import numpy as np
 from loguru import logger
 
-from prompt import Prompts
+from example_game.prompt import Prompts
 from agentscope.agents import AgentBase
 from agentscope.message import Msg
 

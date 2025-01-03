@@ -2,7 +2,7 @@
 """A werewolf game implemented by agentscope."""
 from functools import partial
 
-from prompt import Prompts
+from example_game.prompt import Prompts
 from werewolf_utils import (
     check_winning,
     update_alive_players,
@@ -11,8 +11,8 @@ from werewolf_utils import (
     n2s,
     set_parsers,
 )
-from agents.dict_dialog_agent import DictDialogAgentCustom
-from agents.custom_agent import CustomAgent
+from agents.dict_dialog_agent import CustomDictDialogAgent
+#from agents.custom_agent import CustomAgent
 from agentscope.message import Msg
 from agentscope.msghub import msghub
 from agentscope.pipelines.functional import sequentialpipeline
@@ -29,8 +29,8 @@ def main() -> None:
     MAX_GAME_ROUND = 6
 
     # Register your custom class
-    agentscope.agents.DictDialogAgentCustom = DictDialogAgentCustom
-    agentscope.agents.CustomAgent = CustomAgent
+    agentscope.agents.CustomDictDialogAgent = CustomDictDialogAgent
+    #agentscope.agents.CustomAgent = CustomAgent
 
     # read model and agent configs, and initialize agents automatically
     survivors = agentscope.init(

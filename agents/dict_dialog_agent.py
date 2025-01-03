@@ -5,7 +5,7 @@ from agentscope.agents import AgentBase
 from agentscope.parsers import ParserBase
 
 
-class DictDialogAgentCustom(AgentBase):
+class CustomDictDialogAgent(AgentBase):
     """An agent that generates response in a dict format, where user can
     specify the required fields in the response via specifying the parser
 
