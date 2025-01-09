@@ -11,7 +11,7 @@ from langchain.memory import ConversationBufferMemory
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 
-from werewolf_utils import _convert_to_str
+from utils.werewolf_utils import _convert_to_str
 
 import agentscope
 from agentscope.agents import AgentBase
